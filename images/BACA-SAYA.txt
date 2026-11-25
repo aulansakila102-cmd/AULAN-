@@ -1,0 +1,4 @@
+Taruh foto untuk bagian "Hal-hal yang saya sukai" di folder ini, dengan nama:
+  suka-1.jpg   suka-2.jpg   suka-3.jpg
+(atau klik ikon kamera di setiap foto pada website untuk memilih dari galeri HP/laptop).
+Ganti nama file / keterangan foto di js/script.js pada bagian "likePhotos".

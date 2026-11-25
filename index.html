@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- ============================================================
+  WEBSITE BIODATA PRIBADI
+  Struktur project:
+    index.html     -> kerangka halaman (file ini)
+    css/style.css  -> semua tampilan & animasi
+    js/script.js   -> data pribadi (di bagian atas) + interaksi
+  Cara menjalankan: klik dua kali index.html (tanpa install apa pun).
+  Untuk mengganti data pribadi, cukup edit bagian "DATA" di js/script.js
+============================================================= -->
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aulan Sakila | Personal Website</title>
+  <!-- Font dari Google Fonts (jika offline, otomatis memakai font cadangan) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Dekorasi latar belakang (bulatan blur lembut) -->
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGASI ===== -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Menu utama">
+      <a href="#home" class="brand" id="brand">✿</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#hobbies">My Hobbies</a></li>
+        <li><a href="#favorites">My Favorites</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== 1. HOME ===== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="greeting">Hello, welcome to personal website! ✨</p>
+        <p class="intro">Sebuah ruang sederhana untuk memperkenalkan diri, berbagi cerita, dan menunjukkan sedikit tentang siapa saya.</p>
+        <h1 class="name" id="fullName">Aulan Sakila</h1>
+        <p class="desc">Saya suka hal-hal baru, senang mengeksplorasi ide kreatif, dan menikmati setiap proses dalam kehidupan. Saya percaya bahwa menjadi lebih baik tidak harus dimulai dari hal besar, tetapi dari langkah kecil setiap hari.</p>
+        <div class="btn-row">
+          <a href="#about" class="btn btn-primary">Lihat Biodata</a>
+          <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
+        </div>
+      </div>
+
+      <!-- Foto profil + tombol input manual -->
+      <div class="photo-box">
+        <div class="photo-frame"><img id="profilePhoto" alt="Foto profil"></div>
+        <label class="btn btn-ghost photo-btn" for="photoInput">📷 Ganti foto</label>
+        <input type="file" id="photoInput" accept="image/*" hidden>
+      </div>
+    </section>
+
+    <!-- ===== 2. ABOUT ME ===== -->
+    <section id="about" class="section">
+      <h2 class="reveal">About Me</h2>
+      <dl class="about-card reveal" id="aboutList"></dl>
+    </section>
+
+    <!-- ===== 3. MY HOBBIES ===== -->
+    <section id="hobbies" class="section">
+      <h2 class="reveal">My Hobbies</h2>
+      <div class="grid" id="hobbyGrid"></div>
+    </section>
+
+    <!-- ===== 4. MY FAVORITES ===== -->
+    <section id="favorites" class="section">
+      <h2 class="reveal">My Favorites</h2>
+      <div class="grid" id="favGrid"></div>
+      <h3 class="reveal">Hal-hal yang saya sukai</h3>
+      <p class="likes-card reveal" id="likesText"></p>
+      <div class="gallery" id="likesGallery"></div>
+    </section>
+
+    <!-- ===== 5. CONTACT ME ===== -->
+    <section id="contact" class="section">
+      <h2 class="reveal">Contact Me</h2>
+      <div class="grid" id="contactGrid"></div>
+      <div class="btn-row reveal">
+        <a class="btn btn-primary" id="btnInstagram" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost" id="btnWhatsapp" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" id="btnSpotify" target="_blank" rel="noopener">Spotify</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p id="copyright"></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
